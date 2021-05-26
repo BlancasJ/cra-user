@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import User from './components/User'
 import './App.css';
 
@@ -28,21 +29,23 @@ function Avatar( {url} ) {
   return <img src={url} className='avatar' alt='user avatar'/>;
 }
 
-function App() {
-  return (
-    <div className="container">
-      {users.map( (user) => {
-        return <User
-          key={user.id}
-          name = {user.name}
-          desciption = {user.description}
-          age = {user.age}
-          Avatar ={ <Avatar url={user.avatar} />}
-          hobbies={user.hobbies}
-        />
-      })}
-    </div>
-  );
-}
 
-export default App;
+
+export default class App extends Component {
+  render() {
+    return (
+      <div className="container">
+        {users.map( (user) => {
+          return <User
+            key={user.id}
+            name = {user.name}
+            desciption = {user.description}
+            age = {user.age}
+            Avatar ={ <Avatar url={user.avatar} />}
+            hobbies={user.hobbies}
+          />
+        })}
+      </div>
+    );
+  }
+}
