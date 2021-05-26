@@ -13,7 +13,7 @@ const users = [
     description: 'JavaScript Associate', 
     age: 22, 
     avatar: AVATAR1,
-    hobbies: [{name: 'Read', description: 'Manga and light novels', isActive: true }]
+    hobbies: [{name: 'Read', description: 'Manga and light novels', isActive: true }, {name: 'Cook', description: 'Prepare different meals', isActive: true }]
   },
   {
     id:2,
