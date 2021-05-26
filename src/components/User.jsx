@@ -30,7 +30,7 @@ function User( {name, desciption, age, Avatar, hobbies } ) {
       <FontAwesomeIcon icon={ toggleHobbies ? faMinusCircle : faPlusCircle } className='icon' onClick={showHobbies} />
       {toggleHobbies ? hobbies.map( (hobbie, index) => <Hobbie key={index} hobbie={hobbie}/>) : ''}
       <FontAwesomeIcon icon={showCounter ? faMinusCircle : faStopwatch} className='icon' onClick={() => count(hobbies)}/>
-      {showCounter ? <p>Counter: {counterg}</p> : ''}
+      {showCounter ? <p className='hobbie'>Counter: {counterg}</p> : ''}
     </div>
   )
 }
